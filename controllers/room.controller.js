@@ -2,16 +2,6 @@ import roomService from "../services/room.service.js"
 
 class roomController {
     async Add(req,res){
-        let {
-            room_type,
-            room_class,
-            number_of_rooms,
-            number_od_beds,
-            convinients,
-            price_for_nigth
-        } = req.body
-
-        // console.log(room_type,room_class,number_of_rooms,number_od_beds,convinients,price_for_nigth)
         let result = await roomService.Add(req.body)
         res.send(result)
     }

@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken"
 import bookingService from "../services/booking.service.js";
 
 class bookingController{
+    // Добавление бронирования
     async Add(req, res){
 
 
@@ -16,18 +17,23 @@ class bookingController{
         res.send(result)
         return
     }
+    // Получение бронирования по id
+
     async Get(req, res){
         let id = req.params.id
         let result = await bookingService.Get(id)
         res.send(result)
         return
     }
+    // Получение бронирований
+    
+
     async GetAll(req, res){
         let result = await bookingService.GetAll()
         res.send(result)
         return
     }
-
+    // Удаление бронирования по id
     async Delete(req, res){
         let id = req.params.id
         let result = await bookingService.Delete(id)

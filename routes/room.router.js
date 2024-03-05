@@ -2,6 +2,7 @@ import { Router } from "express";
 import roomController from "../controllers/room.controller.js";
 
 
+// Роутер для комнат
 const roomRouter = Router()
 
 roomRouter.post("/", roomController.Add)

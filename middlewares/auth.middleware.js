@@ -3,6 +3,7 @@ import { pool } from "../storage/connection.js"
 import pino from "../logger/logger.js"
 
 class authMiddlewares {
+    // Проверка валидности jwt токена
      
     async checkToken(req, res, next){
         

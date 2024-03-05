@@ -25,7 +25,6 @@ class bookingService {
             return res
 
         } catch (error) {
-            // console.error("error while adding booking")
             pino.info(error)
             return error
         }

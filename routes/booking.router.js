@@ -3,6 +3,7 @@ import bookingController from "../controllers/booking.controller.js";
 import authMiddleware from "../middlewares/auth.middleware.js";
 
 
+// Роутер для бронирований
 const bookingRouter = Router()
 
 bookingRouter.post("/", authMiddleware.checkToken, bookingController.Add)
